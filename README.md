@@ -27,3 +27,6 @@ Extensions:
 - Svelte Intellisense
 - vscode-styled-components
 - DotENV
+
+## Vite
+[Vite](https://vite.dev/) is a blazing fast fronted build tool powering the next generation of web applications.
