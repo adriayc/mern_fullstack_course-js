@@ -71,7 +71,7 @@ export default App;
 
 - resource [Generate Favicons](https://favicon.io/)
 
-#### Install Packages (Optional)
+#### Install Packages (Optional) (Info)
 
 - yes, specific package versions
 - specific commands will be provided later
