@@ -57,7 +57,7 @@ export default App;
 - Coding Addict - [Default Starter Video](https://youtu.be/UDdyGNlQK5w)
 - Repo - [Default Starter Repo](https://github.com/john-smilga/default-starter)
 
-#### Title and Favicon
+#### Title and Favicon (Info)
 
 - add favicon.ico in public
 - change title and favicon in index.html
