@@ -10,7 +10,7 @@
 npm create vite@latest projectName -- --template react
 ```
 
-#### Vite - Folder and File Structure
+#### Vite - Folder and File Structure (Info)
 
 ```sh
 npm i
