@@ -35,3 +35,6 @@ Extensions:
 ```sh
 $ npm create vite@latest client -- --template react
 ```
+
+## React Router
+[React Router](https://reactrouter.com/en/main) is a widely-used library for managing client-side routing in React applications.
