@@ -1,0 +1,2 @@
+# MERN 2024 EDITION - MONGODB, EXPRESS, REACT AND NODEJS
+> **Instructor:** John Smilga
