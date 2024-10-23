@@ -9,3 +9,21 @@
 - [Rect Fundamentals](https://www.youtube.com/watch?v=Flbw5BX_AX0&ab_channel=CodingAddict)
 - [Node/Express Fundamentals](https://www.youtube.com/watch?v=TNV0_7QRDwY&feature=youtu.be)
 - [Node/Express - MongoDB, Atlas, JWT](https://www.youtube.com/watch?v=rltfdjcXjmk&feature=youtu.be)
+
+## VS Code
+Extensions:
+- ES7+ React/Redux/React-Native snippets
+- Auto Rename Tag
+- Prettier - Code formatter
+- Bracket Pair Colorizer
+- ES7 React/Redux/GraphQL/React-Native snippets
+- indent-rainbow
+- Live Server
+- MDX
+- Preview on Web Server
+- Quokka.js
+- Svelte
+- Svelte 3 Snippets
+- Svelte Intellisense
+- vscode-styled-components
+- DotENV
