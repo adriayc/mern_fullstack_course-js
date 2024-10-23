@@ -47,7 +47,7 @@ export default App;
   - troubleshoot
   - copy
 
-#### Global Styles
+#### Global Styles (Info)
 
 - saves times on the setup
 - less lines of css
