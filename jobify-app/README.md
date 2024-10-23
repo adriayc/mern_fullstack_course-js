@@ -23,7 +23,7 @@ npm run dev
 - APP running on http://localhost:5173/
 - .jsx extension
 
-#### Remove Boilerplate
+#### Remove Boilerplate (Info)
 
 - remove App.css
 - remove all code in index.css
