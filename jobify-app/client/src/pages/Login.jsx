@@ -5,7 +5,6 @@ const Login = () => {
     <div>
       <h1>Login Page</h1>
       <Link to="/register">Register Page</Link>
-      <a href="https://johnsmilga.com/">Best web dev courses</a>
     </div>
   );
 };
