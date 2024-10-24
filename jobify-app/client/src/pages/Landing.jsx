@@ -3,11 +3,15 @@ import { Link } from 'react-router-dom';
 import Wrapper from '../assets/wrappers/LandingPage';
 // Images
 import main from '../assets/images/main.svg';
+// Components
+import { Logo } from '../components';
 
 const Landing = () => {
   return (
     <Wrapper>
-      <nav></nav>
+      <nav>
+        <Logo />
+      </nav>
       <div className="container page">
         <div className="info">
           <h1>
