@@ -14,3 +14,5 @@ MERN JOBIFY
         $ npm i react-router-dom
       - Styled Components
         $ npm install styled-components
+      - React Icons
+        $ npm install react-icons --save
