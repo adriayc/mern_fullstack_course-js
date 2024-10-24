@@ -1,18 +1,23 @@
 import styled from 'styled-components';
 
-const StyledBtn = styled.button`
-  color: white;
-  background: red;
-  font-size: 1.5rem;
-`;
-
 const Landing = () => {
   return (
-    <div>
+    <Wrapper>
       <h1>Landing Page</h1>
-      <StyledBtn>Styled Btn</StyledBtn>
-    </div>
+      <div className="content">Some content</div>
+    </Wrapper>
   );
 };
+
+const Wrapper = styled.div`
+  background: red;
+  h1 {
+    color: white;
+  }
+  .content {
+    color: yellow;
+    background: blue;
+  }
+`;
 
 export default Landing;
