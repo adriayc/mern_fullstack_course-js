@@ -41,3 +41,6 @@ $ npm create vite@latest client -- --template react
 
 ## Styled Components
 [Styled Components](https://styled-components.com/) is a popular library in the React ecosystem that allows developers to write CSS directly within their JavaScript components using tagged template literals
+
+## Node.js
+[Node.js](https://nodejs.org/) is a JavaScript runtime built on Chrome's V8 JavaScript engine, allowing developers to tun JavaScript code on the server side.
