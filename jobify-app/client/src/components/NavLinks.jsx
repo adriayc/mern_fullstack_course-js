@@ -4,7 +4,7 @@ import { useDashboardContext } from '../pages/DashboardLayout';
 // Utils
 import links from '../utils/links';
 
-const NavLinks = () => {
+const NavLinks = ({ isBigSidebar }) => {
   const { toggleSidebar } = useDashboardContext();
 
   return (
@@ -16,7 +16,7 @@ const NavLinks = () => {
             key={text}
             to={path}
             className="nav-link"
-            onClick={toggleSidebar}
+            onClick={isBigSidebar ? null : toggleSidebar}
             // The end prop changes the matching logic for the active and pending states to only match to the "end" of the NavLink's to path. If the URL is longer than to, it will no longer be considered active.
             end
           >
