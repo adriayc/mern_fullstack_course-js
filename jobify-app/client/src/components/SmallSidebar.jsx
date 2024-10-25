@@ -10,13 +10,17 @@ import links from '../utils/links';
 import { Logo } from '../components';
 
 const SmallSidebar = () => {
-  const data = useDashboardContext();
+  const { showSidebar, toggleSidebar } = useDashboardContext();
 
   return (
     <Wrapper>
-      <div className="sidebar-container show-sidebar">
+      <div
+        className={
+          showSidebar ? 'sidebar-container show-sidebar' : 'sidebar-container'
+        }
+      >
         <div className="content">
-          <button type="button" className="close-btn">
+          <button type="button" className="close-btn" onClick={toggleSidebar}>
             <FaTimes />
           </button>
           <header>
@@ -26,7 +30,14 @@ const SmallSidebar = () => {
             {links.map((link) => {
               const { text, path, icon } = link;
               return (
-                <NavLink key={text} to={path} className="nav-link">
+                <NavLink
+                  key={text}
+                  to={path}
+                  className="nav-link"
+                  onClick={toggleSidebar}
+                  // The end prop changes the matching logic for the active and pending states to only match to the "end" of the NavLink's to path. If the URL is longer than to, it will no longer be considered active.
+                  end
+                >
                   <span className="icon">{icon}</span>
                   {text}
                 </NavLink>
