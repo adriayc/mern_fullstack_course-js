@@ -3,28 +3,28 @@ import styled from 'styled-components';
 const Wrapper = styled.aside`
   display: none;
   @media (min-width: 992px) {
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
     display: block;
-    box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
     .sidebar-container {
-      background: var(--background-secondary-color);
-      min-height: 100vh;
-      height: 100%;
       width: 250px;
+      height: 100%;
+      min-height: 100vh;
+      background: var(--background-secondary-color);
       margin-left: -250px;
       transition: margin-left 0.3s ease-in-out;
+    }
+    .show-sidebar {
+      margin-left: 0;
     }
     .content {
       position: sticky;
       top: 0;
     }
-    .show-sidebar {
-      margin-left: 0;
-    }
     header {
       height: 6rem;
+      padding-left: 2.5rem;
       display: flex;
       align-items: center;
-      padding-left: 2.5rem;
     }
     .nav-links {
       padding-top: 2rem;
@@ -32,17 +32,17 @@ const Wrapper = styled.aside`
       flex-direction: column;
     }
     .nav-link {
-      display: flex;
-      align-items: center;
       color: var(--text-secondary-color);
+      text-transform: capitalize;
       padding: 1rem 0;
       padding-left: 2.5rem;
-      text-transform: capitalize;
+      display: flex;
+      align-items: center;
       transition: padding-left 0.3s ease-in-out;
     }
     .nav-link:hover {
-      padding-left: 3rem;
       color: var(--primary-500);
+      padding-left: 3rem;
       transition: var(--transition);
     }
     .icon {
@@ -54,9 +54,7 @@ const Wrapper = styled.aside`
     .active {
       color: var(--primary-500);
     }
-    .pending {
-      background: var(--background-color);
-    }
   }
 `;
+
 export default Wrapper;
