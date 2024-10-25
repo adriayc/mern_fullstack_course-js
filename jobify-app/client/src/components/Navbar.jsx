@@ -1,9 +1,11 @@
 import { FaAlignLeft } from 'react-icons/fa';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/Navbar';
+// Custom hook (Context)
+import { useDashboardContext } from '../pages/DashboardLayout';
 // Components
 import { Logo } from '../components';
-import { useDashboardContext } from '../pages/DashboardLayout';
+import LogoutContainer from './LogoutContainer';
 
 const Navbar = () => {
   const { toggleSidebar } = useDashboardContext();
@@ -18,7 +20,9 @@ const Navbar = () => {
           <Logo />
           <h4 className="logo-text">Dashboard</h4>
         </div>
-        <div className="btn-container">Toggle/Logout</div>
+        <div className="btn-container">
+          <LogoutContainer />
+        </div>
       </div>
     </Wrapper>
   );
