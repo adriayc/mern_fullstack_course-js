@@ -27,6 +27,7 @@ app.post('/', (req, res) => {
 
 // Get All Jobs
 app.get('/api/v1/jobs', (req, res) => {
+  console.log(jobss); // Error
   res.status(200).json({ jobs });
 });
 // Create Job
@@ -52,6 +53,7 @@ app.get('/api/v1/jobs/:id', (req, res) => {
 
   const job = jobs.find((job) => job.id === id);
   if (!job) {
+    throw new Error('no job with that id'); // Error
     return res.status(404).json({ msg: `no job with id: ${id} exist` });
   }
 

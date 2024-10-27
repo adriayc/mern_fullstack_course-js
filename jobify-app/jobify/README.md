@@ -2001,7 +2001,7 @@ app.use((err, req, res, next) => {
 });
 ```
 
-#### Not Found and Error Middleware
+#### Not Found and Error Middleware (Info)
 
 The "not found" middleware in Express.js is used when a request is made to a route that does not exist. It catches these requests and responds with a 404 status code, indicating that the requested resource was not found.
 
