@@ -41,6 +41,8 @@ MERN JOBIFY
         $ npm i morgan
       * DotEnv
         $ npm i dotenv
+      * Nano ID
+        $ npm i nanoid
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
