@@ -43,6 +43,8 @@ MERN JOBIFY
         $ npm i dotenv
       * Nano ID
         $ npm i nanoid
+      * Mongoose
+        $ npm install mongoose --save
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
