@@ -33,4 +33,5 @@ MERN JOBIFY
         Is this OK? (yes) ENTER
       $ npm init -y
     + Run app
+      $ npm run setup-project   // Install all dependencies (Client and Server)
       $ node server.js          // Run a file (optional)
