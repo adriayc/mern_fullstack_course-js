@@ -37,6 +37,10 @@ MERN JOBIFY
         $ npm install express --save
       * Nodemon
         $ npm install --save-dev nodemon
+      * Morgan (HTTP request logger middleware)
+        $ npm i morgan
+      * DotEnv
+        $ npm i dotenv
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
