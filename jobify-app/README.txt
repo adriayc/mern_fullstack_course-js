@@ -32,6 +32,12 @@ MERN JOBIFY
         > license: (ISC) ENTER
         Is this OK? (yes) ENTER
       $ npm init -y
+    + Install dependencies
+      * Express
+        $ npm install express --save
+      * Nodemon
+        $ npm install --save-dev nodemon
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
+      $ npm run dev             // Run app (nodemon app.js)
       $ node server.js          // Run a file (optional)

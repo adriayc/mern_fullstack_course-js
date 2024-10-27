@@ -44,3 +44,6 @@ $ npm create vite@latest client -- --template react
 
 ## Node.js
 [Node.js](https://nodejs.org/) is a JavaScript runtime built on Chrome's V8 JavaScript engine, allowing developers to tun JavaScript code on the server side.
+
+## Express.js
+[Express.js](https://expressjs.com/) is a popular web application framework for Node.js. It simplifies the process of biulding web servers and APIs by providing a thin layer of essential tools feactures that make sever-side development more manageable.
