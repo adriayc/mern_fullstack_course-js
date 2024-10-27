@@ -48,3 +48,14 @@ MERN JOBIFY
       $ npm run dev             // Run app (nodemon app.js)
       $ npm run watch           // Run app (node --watch app.js)
       $ node server.js          // Run a file (optional)
+  - MongoDB Atlas
+    * Sign up/Sign in
+    * Create a cluster [DATABASE | Clusters -> Click 'Build a Cluster']
+      > Deploy your cluster
+        > M0 Free
+        > Name: Ax2CDev
+        > Provider: AWS
+        Click 'Create Deployment'
+      Click 'Close'
+    * Add new DB user [SECURITY | Database Access -> Click 'Add New Database User']
+    * COPY [DATABASE | Clusters -> Click 'Connect' -> 'Drivers' -> Copy Connection String]
