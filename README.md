@@ -47,3 +47,6 @@ $ npm create vite@latest client -- --template react
 
 ## Express.js
 [Express.js](https://expressjs.com/) is a popular web application framework for Node.js. It simplifies the process of biulding web servers and APIs by providing a thin layer of essential tools feactures that make sever-side development more manageable.
+
+## MongoDB
+[MongoDB](https://www.mongodb.com/) is a popular NoSQL database known for its flexibility and scalability. Unlike ralational databases, which store data in tables, MongoDB stores data in JSON-like documents.
