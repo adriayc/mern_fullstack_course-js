@@ -1802,7 +1802,7 @@ package.json
   },
 ```
 
-#### Thunder Client
+#### Thunder Client (Info)
 
 Thunder Client is a popular Visual Studio Code extension that facilitates API testing and debugging. It provides a user-friendly interface for making HTTP requests and viewing the responses, allowing developers to easily test APIs, examine headers, and inspect JSON/XML payloads. Thunder Client offers features such as environment variables, request history, and the ability to save and organize requests for efficient development workflows.
 
