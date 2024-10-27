@@ -1866,7 +1866,7 @@ app.listen(port, () => {
 });
 ```
 
-#### New Features
+#### New Features {Info}
 
 - fetch API
 - global await (top-level await)

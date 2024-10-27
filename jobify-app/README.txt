@@ -44,4 +44,5 @@ MERN JOBIFY
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
+      $ npm run watch           // Run app (node --watch app.js)
       $ node server.js          // Run a file (optional)
