@@ -32,3 +32,5 @@ MERN JOBIFY
         > license: (ISC) ENTER
         Is this OK? (yes) ENTER
       $ npm init -y
+    + Run app
+      $ node server.js          // Run a file (optional)
