@@ -29,6 +29,23 @@ app.post('/', (req, res) => {
 app.get('/api/v1/jobs', (req, res) => {
   res.status(200).json({ jobs });
 });
+// Create Job
+app.post('/api/v1/jobs', (req, res) => {
+  const { company, position } = req.body;
+
+  if (!company || !position) {
+    // return res.status(400).json({ msg: 'please provide company and position' });
+    res.status(400).json({ msg: 'please provide company and position' });
+    return;
+  }
+
+  const id = nanoid();
+  const job = { id, company, position };
+
+  jobs.push(job);
+
+  res.status(200).json({ job });
+});
 
 const port = process.env.PORT || 5100;
 app.listen(port, () => {
