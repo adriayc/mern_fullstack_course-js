@@ -2461,7 +2461,7 @@ export class UnauthorizedError extends Error {
 }
 ```
 
-#### Validation Layer
+#### Validation Layer (Info)
 
 [Express Validator](https://express-validator.github.io/docs/)
 
