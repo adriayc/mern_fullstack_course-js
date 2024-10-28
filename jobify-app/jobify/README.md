@@ -2314,7 +2314,7 @@ export const updateJob = async (req, res) => {
 };
 ```
 
-#### Status Codes
+#### Status Codes (Info)
 
 A library for HTTP status codes is useful because it provides a comprehensive and standardized set of codes that represent the outcome of HTTP requests. It allows developers to easily understand and handle different scenarios during web development, such as successful responses, client or server errors, redirects, and more. By using a status code library, developers can ensure consistent and reliable communication between servers and clients, leading to better error handling and improved user experience.
 

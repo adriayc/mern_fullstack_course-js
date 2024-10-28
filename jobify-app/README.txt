@@ -47,6 +47,8 @@ MERN JOBIFY
         $ npm install mongoose --save
       * ExpressJS Async Errors
         $ npm i express-async-errors
+      * Http Status Codes
+        $ npm i http-status-codes
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
