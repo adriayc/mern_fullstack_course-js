@@ -9,13 +9,13 @@ let jobs = [
 
 // Get All Jobs
 export const getAllJobs = async (req, res) => {
+  const jobs = await Job.find({});
   res.status(200).json({ jobs });
 };
 
 // Create Job
 export const createJob = async (req, res) => {
   const job = await Job.create(req.body);
-  // const job = await Job.create('something'); // Error
   res.status(200).json({ job });
 };
 
@@ -23,9 +23,8 @@ export const createJob = async (req, res) => {
 export const getSingleJob = async (req, res) => {
   const { id } = req.params;
 
-  const job = jobs.find((job) => job.id === id);
+  const job = await Job.findById(id);
   if (!job) {
-    throw new Error('no job with that id'); // Error
     return res.status(404).json({ msg: `no job with id: ${id} exist` });
   }
 
