@@ -49,6 +49,8 @@ MERN JOBIFY
         $ npm i express-async-errors
       * Http Status Codes
         $ npm i http-status-codes
+      * Express Validator
+        $ npm i express-validator
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
