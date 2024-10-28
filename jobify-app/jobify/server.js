@@ -5,6 +5,8 @@ import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 // Routers
 import jobRouter from './routes/jobRouter.js';
+// Custom middlewares
+import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
 
 const app = express();
 dotenv.config(); // DotEnv config
@@ -30,11 +32,9 @@ app.use('/api/v1/jobs', jobRouter);
 app.use('*', (req, res) => {
   res.status(404).json({ msg: 'no found' });
 });
-// Error route (Middleware)
-app.use((err, req, res, next) => {
-  console.log(err);
-  res.status(500).json({ smg: 'something went wrong' });
-});
+
+// Call custom middlewares
+app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 5100;
 
