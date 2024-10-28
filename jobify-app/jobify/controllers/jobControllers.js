@@ -32,7 +32,7 @@ export const updateJob = async (req, res) => {
 
   const updatedJob = await Job.findByIdAndUpdate(id, req.body, {
     new: true,
-    runValidators: true,
+    // runValidators: true,
   });
   if (!updatedJob) throw new NotFoundError(`no job with id: ${id} exist`);
 
