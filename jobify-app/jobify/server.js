@@ -5,6 +5,7 @@ import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 // Routers
 import jobRouter from './routes/jobRouter.js';
+import authRouter from './routes/authRouter.js';
 // Custom middlewares
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
 
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 
 // Call routers
 app.use('/api/v1/jobs', jobRouter);
+app.use('/api/v1/auth', authRouter);
 
 // Not found (Middleware)
 app.use('*', (req, res) => {
