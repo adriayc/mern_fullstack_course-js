@@ -1,8 +1,10 @@
 import { StatusCodes } from 'http-status-codes';
 // Models
 import User from '../models/UserModel.js';
+// Errors
+import { UnauthenticatedError } from '../errors/customErrors.js';
 // Utils
-import { hashPassword } from '../utils/passwordUtils.js';
+import { comparePassword, hashPassword } from '../utils/passwordUtils.js';
 
 // Register user
 export const register = async (req, res) => {
@@ -19,5 +21,11 @@ export const register = async (req, res) => {
 
 // Login user
 export const login = async (req, res) => {
+  const user = await User.findOne({ email: req.body.email });
+
+  const isValidUser =
+    user && (await comparePassword(req.body.password, user.password));
+  if (!isValidUser) throw new UnauthenticatedError('invalid credential');
+
   res.send('login');
 };
