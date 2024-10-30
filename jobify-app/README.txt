@@ -53,6 +53,8 @@ MERN JOBIFY
         $ npm i express-validator
       * Bcrypt.js
         $ npm i bcryptjs
+      * JSON Web Token
+        $ npm i jsonwebtoken
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)

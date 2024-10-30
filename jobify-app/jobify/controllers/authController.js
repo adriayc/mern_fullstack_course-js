@@ -5,6 +5,7 @@ import User from '../models/UserModel.js';
 import { UnauthenticatedError } from '../errors/customErrors.js';
 // Utils
 import { comparePassword, hashPassword } from '../utils/passwordUtils.js';
+import { createJWT } from '../utils/tokenUtils.js';
 
 // Register user
 export const register = async (req, res) => {
@@ -27,5 +28,10 @@ export const login = async (req, res) => {
     user && (await comparePassword(req.body.password, user.password));
   if (!isValidUser) throw new UnauthenticatedError('invalid credential');
 
-  res.send('login');
+  const token = createJWT({
+    userId: user._id,
+    role: user.role,
+  });
+
+  res.json({ token });
 };
