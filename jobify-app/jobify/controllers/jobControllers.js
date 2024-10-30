@@ -4,7 +4,6 @@ import Job from '../models/JobModel.js';
 
 // Get All Jobs
 export const getAllJobs = async (req, res) => {
-  console.log(req);
   const jobs = await Job.find({});
   res.status(StatusCodes.OK).json({ jobs });
 };

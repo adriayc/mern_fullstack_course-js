@@ -8,6 +8,7 @@ import jobRouter from './routes/jobRouter.js';
 import authRouter from './routes/authRouter.js';
 // Custom middlewares
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js';
+import { authenticateUser } from './middleware/authMiddleware.js';
 
 const app = express();
 dotenv.config(); // DotEnv config
@@ -23,7 +24,7 @@ app.get('/', (req, res) => {
 });
 
 // Call routers
-app.use('/api/v1/jobs', jobRouter);
+app.use('/api/v1/jobs', authenticateUser, jobRouter);
 app.use('/api/v1/auth', authRouter);
 
 // Not found (Middleware)
