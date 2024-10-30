@@ -3133,7 +3133,7 @@ import { authenticateUser } from './middleware/authMiddleware.js';
 app.use('/api/v1/jobs', authenticateUser, jobRouter);
 ```
 
-##### Cookie Parser
+##### Cookie Parser (Info)
 
 [Cookie Parser](https://www.npmjs.com/package/cookie-parser)
 

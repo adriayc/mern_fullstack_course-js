@@ -3,6 +3,7 @@ import express from 'express';
 import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import cookieParser from 'cookie-parser';
 // Routers
 import jobRouter from './routes/jobRouter.js';
 import authRouter from './routes/authRouter.js';
@@ -15,6 +16,7 @@ dotenv.config(); // DotEnv config
 
 // Call middleware
 app.use(express.json());
+app.use(cookieParser());
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
