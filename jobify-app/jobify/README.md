@@ -2825,7 +2825,7 @@ req.body.role = isFirstAccount ? 'admin' : 'user';
 const user = await User.create(req.body);
 ```
 
-#### Hash Passwords
+#### Hash Passwords (Info)
 
 [bcryptjs](https://www.npmjs.com/package/bcryptjs)
 

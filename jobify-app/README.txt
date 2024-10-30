@@ -51,6 +51,8 @@ MERN JOBIFY
         $ npm i http-status-codes
       * Express Validator
         $ npm i express-validator
+      * Bcrypt.js
+        $ npm i bcryptjs
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
