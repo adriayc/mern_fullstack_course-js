@@ -1,7 +1,8 @@
 import { StatusCodes } from 'http-status-codes';
-import bcrypt from 'bcryptjs';
 // Models
 import User from '../models/UserModel.js';
+// Utils
+import { hashPassword } from '../utils/passwordUtils.js';
 
 // Register user
 export const register = async (req, res) => {
@@ -9,8 +10,7 @@ export const register = async (req, res) => {
 
   req.body.role = isFirstAccount ? 'admin' : 'user';
   // Hash password
-  const salt = await bcrypt.genSalt(10);
-  const hashedPassword = await bcrypt.hash(req.body.password, salt);
+  const hashedPassword = await hashPassword(req.body.password);
   req.body.password = hashedPassword;
 
   const user = await User.create(req.body);
