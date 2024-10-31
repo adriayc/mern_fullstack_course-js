@@ -3506,7 +3506,7 @@ rewrite: (path) => path.replace(/^\/api/, ''): This property allows you to modif
 
 To summarize, these lines of code configure a proxy rule for requests starting with /api on the development server. The requests will be redirected to http://localhost:5100/api, with the /api prefix removed from the path.
 
-#### Concurrently
+#### Concurrently (Info)
 
 The concurrently npm package is a utility that allows you to run multiple commands concurrently in the same terminal window. It provides a convenient way to execute multiple tasks or processes simultaneously.
 

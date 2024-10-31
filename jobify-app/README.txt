@@ -57,6 +57,8 @@ MERN JOBIFY
         $ npm i jsonwebtoken
       * Cookie Parser
         $ npm i cookie-parser
+      * Concurrently
+        $ npm i concurrently
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
