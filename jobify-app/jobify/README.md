@@ -3655,7 +3655,7 @@ import { action as registerAction } from './pages/Register';
 },
 ```
 
-#### useNavigation() and navigation.state
+#### useNavigation() and navigation.state (Info)
 
 This hook tells you everything you need to know about a page navigation to build pending navigation indicators and optimistic UI on data mutations. Things like:
 
