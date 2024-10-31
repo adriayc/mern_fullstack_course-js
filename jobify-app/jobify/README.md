@@ -3436,7 +3436,7 @@ router.get('/admin/app-stats', [
 ]);
 ```
 
-#### Setup Proxy
+#### Setup Proxy (Info)
 
 - only in dev env
 - a must since cookies are sent back to the same server
