@@ -3621,7 +3621,7 @@ App.jsx
 },
 ```
 
-#### Register User
+#### Register User (Info)
 
 - FormData API
 

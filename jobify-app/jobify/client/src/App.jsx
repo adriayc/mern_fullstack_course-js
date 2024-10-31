@@ -41,10 +41,6 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register />,
-        // action: () => {
-        //   console.log('Hello there');
-        //   // return null;
-        // },
         action: registerAction,
       },
       {

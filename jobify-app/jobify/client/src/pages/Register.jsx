@@ -1,13 +1,25 @@
-import { Form, Link } from 'react-router-dom';
+import { Form, Link, redirect } from 'react-router-dom';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
+// Custom fetch (Axios)
+import customFetch from '../utils/customFetch';
 // Components
 import { FormRow, Logo } from '../components';
 
 // Action
-export const action = async (data) => {
-  console.log(data);
-  return null;
+export const action = async ({ request }) => {
+  const formData = await request.formData();
+  // Transform a list of key-value pairs into an object
+  const data = Object.fromEntries(formData);
+
+  try {
+    await customFetch.post('/auth/register', data);
+    // return null;
+    return redirect('/login');
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
 };
 
 const Register = () => {
