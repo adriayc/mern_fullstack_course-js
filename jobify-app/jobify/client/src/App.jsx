@@ -13,6 +13,8 @@ import {
   Profile,
   Admin,
 } from './pages';
+// Actions
+import { action as registerAction } from './pages/Register';
 
 // Check default theme
 export const checkDefaultTheme = () => {
@@ -39,6 +41,11 @@ const router = createBrowserRouter([
       {
         path: 'register',
         element: <Register />,
+        // action: () => {
+        //   console.log('Hello there');
+        //   // return null;
+        // },
+        action: registerAction,
       },
       {
         path: 'login',
