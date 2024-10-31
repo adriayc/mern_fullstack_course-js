@@ -1,4 +1,5 @@
 import { Form, Link, redirect, useNavigation } from 'react-router-dom';
+import { toast } from 'react-toastify';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 // Custom fetch (Axios)
@@ -14,10 +15,12 @@ export const action = async ({ request }) => {
 
   try {
     await customFetch.post('/auth/register', data);
+    toast.success('Registration successful');
     // return null;
     return redirect('/login');
   } catch (error) {
-    console.log(error);
+    // console.log(error);
+    toast.error(error?.response?.data?.msg);
     return error;
   }
 };

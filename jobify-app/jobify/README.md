@@ -3689,7 +3689,7 @@ const Register = () => {
 export default Register;
 ```
 
-#### React-Toastify
+#### React-Toastify (Info)
 
 Import and set up the react-toastify library.
 
