@@ -16,6 +16,8 @@ MERN JOBIFY
         $ npm install styled-components
       - React Icons
         $ npm install react-icons --save
+      - Axios
+        $ npm install axios
 
 * Backend
   - Initialize the app
