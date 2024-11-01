@@ -1,3 +1,4 @@
+import { createContext, useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 // Custom fetch (Axios)
@@ -17,16 +18,20 @@ export const loader = async () => {
   }
 };
 
+// Define context
+const AllJobsContext = createContext();
+
 const AllJobs = () => {
   const { data } = useLoaderData();
-  console.log(data);
 
   return (
-    <>
+    <AllJobsContext.Provider value={{ data }}>
       <SearchContainer />
       <JobsContainer />
-    </>
+    </AllJobsContext.Provider>
   );
 };
-
+// Export custom hook (Context)
+export const useAllJobsContext = () => useContext(AllJobsContext);
+// Export component
 export default AllJobs;
