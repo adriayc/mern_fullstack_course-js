@@ -1,15 +1,23 @@
 import { createContext, useContext, useState } from 'react';
-import { Outlet, useLoaderData } from 'react-router-dom';
+import { Outlet, redirect, useLoaderData } from 'react-router-dom';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/Dashboard';
+// Custom fetch (Axios)
+import customFetch from '../utils/customFetch';
 // Functions
 import { checkDefaultTheme } from '../App';
 // Components
 import { SmallSidebar, BigSidebar, Navbar } from '../components';
 
 // Loader
-export const loader = () => {
-  return 'hello world';
+export const loader = async () => {
+  try {
+    const { data } = await customFetch.get('/users/current-user');
+    return data;
+  } catch (error) {
+    console.log(error);
+    return redirect('/');
+  }
 };
 
 // Define context
@@ -17,10 +25,7 @@ const DashboardContext = createContext();
 
 const DashboardLayout = ({ isDarkThemeEnabled }) => {
   // Get loader data
-  const data = useLoaderData();
-  console.log(data);
-  // Temp
-  const user = { name: 'adriano' };
+  const { user } = useLoaderData();
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme);
@@ -60,7 +65,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet />
+              <Outlet context={{ user }} />
             </div>
           </div>
         </main>
