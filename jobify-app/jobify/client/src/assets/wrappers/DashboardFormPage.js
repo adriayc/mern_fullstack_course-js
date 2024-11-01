@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  border-radius: var(--border-radius);
   width: 100%;
   background: var(--background-secondary-color);
   padding: 3rem 2rem 4rem;
+  border-radius: var(--border-radius);
   .form-title {
     margin-bottom: 2rem;
   }
   .form {
-    margin: 0;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    max-width: 100%;
     width: 100%;
+    max-width: 100%;
+    padding: 0;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
   }
   .form-row {
     margin-bottom: 0;
@@ -24,10 +24,10 @@ const Wrapper = styled.section`
     row-gap: 1rem;
   }
   .form-btn {
-    align-self: end;
     margin-top: 1rem;
     display: grid;
     place-items: center;
+    align-self: end;
   }
   @media (min-width: 992px) {
     .form-center {
