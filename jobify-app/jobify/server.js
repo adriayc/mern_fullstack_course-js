@@ -4,6 +4,9 @@ import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
+// Public
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 // Routers
 import jobRouter from './routes/jobRouter.js';
 import authRouter from './routes/authRouter.js';
@@ -15,9 +18,12 @@ import { authenticateUser } from './middleware/authMiddleware.js';
 const app = express();
 dotenv.config(); // DotEnv config
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
 // Call middleware
 app.use(express.json());
 app.use(cookieParser());
+app.use(express.static(path.resolve(__dirname, './public'))); // File upload (directory)
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
