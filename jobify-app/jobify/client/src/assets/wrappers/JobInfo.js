@@ -17,4 +17,5 @@ const Wrapper = styled.div`
     letter-spacing: var(--letter-spacing);
   }
 `;
+
 export default Wrapper;
