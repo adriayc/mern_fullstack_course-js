@@ -4806,7 +4806,7 @@ const Wrapper = styled.article`
 export default Wrapper;
 ```
 
-#### Avatar Image
+#### Avatar Image (Info)
 
 - get two images from pexels
 
