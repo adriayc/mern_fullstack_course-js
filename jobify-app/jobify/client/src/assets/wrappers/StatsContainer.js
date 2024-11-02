@@ -11,4 +11,5 @@ const Wrapper = styled.section`
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;
+
 export default Wrapper;
