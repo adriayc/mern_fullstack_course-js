@@ -65,6 +65,8 @@ MERN JOBIFY
         $ npm i cookie-parser
       * Concurrently
         $ npm i concurrently
+      * Multer (Uploading files)
+        $ npm i multer
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
