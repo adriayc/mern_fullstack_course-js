@@ -5075,7 +5075,7 @@ const SubmitBtn = ({ formBtn }) => {
 export default SubmitBtn;
 ```
 
-#### Test User
+#### Test User (Info)
 
 - create test user
 - feel free to use one of the chatGPT options

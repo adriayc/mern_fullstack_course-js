@@ -1,4 +1,10 @@
-import { Form, Link, redirect, useActionData } from 'react-router-dom';
+import {
+  Form,
+  Link,
+  redirect,
+  useActionData,
+  useNavigate,
+} from 'react-router-dom';
 import { toast } from 'react-toastify';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
@@ -35,6 +41,24 @@ const Login = () => {
   // The most common use-case for this hook is form validation errors
   const errors = useActionData();
 
+  const navigate = useNavigate();
+
+  const loginDemoUser = async () => {
+    const data = {
+      email: 'test@test.com',
+      password: 'secret123',
+    };
+
+    try {
+      await customFetch.post('auth/login', data);
+      toast.success('Login successful');
+      navigate('/dashboard');
+    } catch (error) {
+      // console.log(error);
+      toast.error(error?.response?.data?.msg);
+    }
+  };
+
   return (
     <Wrapper>
       <Form method="post" className="form">
@@ -44,7 +68,7 @@ const Login = () => {
         <FormRow type="email" name="email" defaultValue="adriano@mail.com" />
         <FormRow type="password" name="password" defaultValue="secret123" />
         <SubmitBtn />
-        <button type="button" className="btn btn-block">
+        <button type="button" className="btn btn-block" onClick={loginDemoUser}>
           Explore the app
         </button>
         <p>
