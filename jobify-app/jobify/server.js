@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
+import { v2 as cloudinary } from 'cloudinary';
 // Public
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -17,6 +18,13 @@ import { authenticateUser } from './middleware/authMiddleware.js';
 
 const app = express();
 dotenv.config(); // DotEnv config
+
+// Cloudinary configuration
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.CLOUD_API_KEY,
+  api_secret: process.env.CLOUD_API_SECRET,
+});
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 

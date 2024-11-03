@@ -67,6 +67,8 @@ MERN JOBIFY
         $ npm i concurrently
       * Multer (Uploading files)
         $ npm i multer
+      * Cloudinary
+        $ npm i cloudinary
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
@@ -83,3 +85,7 @@ MERN JOBIFY
       Click 'Close'
     * Add new DB user [SECURITY | Database Access -> Click 'Add New Database User']
     * COPY [DATABASE | Clusters -> Click 'Connect' -> 'Drivers' -> Copy Connection String]
+  - Cloudinary
+    * Sign Up/Log In
+    * API Keys [Settings -> API Keys]
+    * Getting Started [Programmable Media -> Getting Started]
