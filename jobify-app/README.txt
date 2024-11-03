@@ -89,3 +89,15 @@ MERN JOBIFY
     * Sign Up/Log In
     * API Keys [Settings -> API Keys]
     * Getting Started [Programmable Media -> Getting Started]
+  - Mockaroo (URL:https://www.mockaroo.com/)
+    * Remove all fields
+    * Click '+ Add Another Field'
+      Field Name        Type              Options
+      > company         Company Name
+      > position        Job Title
+      > jobLocation     City
+      > jobStatus       Custom List       pending, declined, interview
+      > jobType         Custom List       full-time, part-time, internship
+      > createdAt       Datetime          01/01/2023 to 03/11/2024 format: ISO 8601 (UTC)
+        > # Rows: 50    Format: JSON    [true] Array    [false] include null values
+      Click 'Preview' and 'Generate Data'
