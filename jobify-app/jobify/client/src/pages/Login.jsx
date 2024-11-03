@@ -1,17 +1,11 @@
-import {
-  Form,
-  Link,
-  redirect,
-  useNavigation,
-  useActionData,
-} from 'react-router-dom';
+import { Form, Link, redirect, useActionData } from 'react-router-dom';
 import { toast } from 'react-toastify';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/RegisterAndLoginPage';
 // Custom fetch (Axios)
 import customFetch from '../utils/customFetch';
 // Images
-import { FormRow, Logo } from '../components';
+import { FormRow, Logo, SubmitBtn } from '../components';
 
 // Action
 export const action = async ({ request }) => {
@@ -38,12 +32,8 @@ export const action = async ({ request }) => {
 };
 
 const Login = () => {
-  const navigation = useNavigation();
-  const isSubmitting = navigation.state === 'submitting';
-
   // The most common use-case for this hook is form validation errors
   const errors = useActionData();
-  console.log(errors);
 
   return (
     <Wrapper>
@@ -53,9 +43,7 @@ const Login = () => {
         {errors?.msg && <p style={{ color: 'red' }}>{errors.msg}</p>}
         <FormRow type="email" name="email" defaultValue="adriano@mail.com" />
         <FormRow type="password" name="password" defaultValue="secret123" />
-        <button type="submit" className="btn btn-block" disabled={isSubmitting}>
-          {isSubmitting ? 'Submitting...' : 'Submit'}
-        </button>
+        <SubmitBtn />
         <button type="button" className="btn btn-block">
           Explore the app
         </button>
