@@ -5148,7 +5148,7 @@ const Login = () => {
 export default Login;
 ```
 
-#### Test User - Restrict Access
+#### Test User - Restrict Access (Info)
 
 authMiddleware
 
