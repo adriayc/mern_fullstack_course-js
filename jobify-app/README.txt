@@ -74,6 +74,7 @@ MERN JOBIFY
       $ npm run dev             // Run app (nodemon app.js)
       $ npm run watch           // Run app (node --watch app.js)
       $ node server.js          // Run a file (optional)
+      $ node populate           // Run a file (populate jobs)
   - MongoDB Atlas
     * Sign up/Sign in
     * Create a cluster [DATABASE | Clusters -> Click 'Build a Cluster']
