@@ -5,6 +5,7 @@ const Wrapper = styled.article`
   background: var(--background-secondary-color);
   /* Access props */
   border-bottom: 5px solid ${(props) => props.color};
+  border-radius: var(--border-radius);
   header {
     display: flex;
     justify-content: space-between;
