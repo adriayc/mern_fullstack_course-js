@@ -7,10 +7,19 @@ import customFetch from '../utils/customFetch';
 import { JobsContainer, SearchContainer } from '../components';
 
 // Loader
-export const loader = async () => {
-  console.log('Hello');
+export const loader = async ({ request }) => {
+  // console.log(request.url);
+  // Get search params (object)
+  const params = Object.fromEntries([
+    ...new URL(request.url).searchParams.entries(),
+  ]);
+  // console.log(params);
+
   try {
-    const { data } = await customFetch.get('/jobs');
+    // Get jobs (With params)
+    const { data } = await customFetch.get('/jobs', {
+      params,
+    });
     return { data };
   } catch (error) {
     // console.log(error);
