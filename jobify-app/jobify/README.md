@@ -5466,7 +5466,7 @@ const ChartsContainer = ({ data }) => {
 export default ChartsContainer;
 ```
 
-#### Charts
+#### Charts (Info)
 
 [recharts](https://recharts.org/en-US/)
 

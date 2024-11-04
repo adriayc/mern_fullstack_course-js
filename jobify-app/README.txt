@@ -22,6 +22,8 @@ MERN JOBIFY
         $ npm i react-toastify
       - Day.JS
         $ npm i dayjs
+      - Recharts
+        $ npm install recharts
 
 * Backend
   - Initialize the app
