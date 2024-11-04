@@ -69,6 +69,8 @@ MERN JOBIFY
         $ npm i multer
       * Cloudinary
         $ npm i cloudinary
+      * Day.JS
+        $ npm i dayjs
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
