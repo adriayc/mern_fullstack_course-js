@@ -5267,7 +5267,7 @@ export const showStats = async (req, res) => {
 };
 ```
 
-#### Stats - Complete Server Functionality
+#### Stats - Complete Server Functionality (Info)
 
 [MongoDB Docs](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
 
