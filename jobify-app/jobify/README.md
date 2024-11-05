@@ -5807,7 +5807,7 @@ const SearchContainer = () => {
 export default SearchContainer;
 ```
 
-#### Debounce
+#### Debounce (Info)
 
 [JS Nuggets - Debounce](https://youtu.be/tYx6pXdvt1s)
 
