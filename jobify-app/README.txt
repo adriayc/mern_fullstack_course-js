@@ -116,3 +116,5 @@ MERN JOBIFY
     + Run app (Server)
       $ node server
     + Open the browser (URL: http://localhost:5100)
+  - Render (URL: https://render.com/)
+    + Sign up/Sign in
