@@ -48,6 +48,11 @@ app.use('/api/v1/jobs', authenticateUser, jobRouter);
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', authenticateUser, userRouter);
 
+// Response file 'index.html' (Client)
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './public', 'index.html'));
+});
+
 // Not found (Middleware)
 app.use('*', (req, res) => {
   res.status(404).json({ msg: 'no found' });

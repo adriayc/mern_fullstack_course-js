@@ -106,3 +106,13 @@ MERN JOBIFY
       > createdAt       Datetime          01/01/2023 to 03/11/2024 format: ISO 8601 (UTC)
         > # Rows: 50    Format: JSON    [true] Array    [false] include null values
       Click 'Preview' and 'Generate Data'
+
+*  Deploy
+  - Local build
+    + Front-end
+      $ cd client/
+      $ npm run build
+    + COPY and PASTE all the contents of the 'build' (Front-end) to the 'public/' directory
+    + Run app (Server)
+      $ node server
+    + Open the browser (URL: http://localhost:5100)
