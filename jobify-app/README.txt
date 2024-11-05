@@ -73,6 +73,8 @@ MERN JOBIFY
         $ npm i cloudinary
       * Day.JS
         $ npm i dayjs
+      * Data:uri (Generate Data URI scheme)
+        $ npm i datauri
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
