@@ -147,4 +147,8 @@ MERN JOBIFY
             > File Contents: COPY and PASTE the entire contents of the .env file
             Click 'Save'
         Click 'Create Web Service'
-    + COPY URL_APP and open the browser to test  
+    + COPY URL_APP and open the browser to test
+    + Re-deploy [Dashboard -> Select: 'temp-mern-course']
+      - Settings
+        > Build Command: $ npm run setup-production-app
+      Click 'Manul Deploy' | 'Clear build cache & deploy'

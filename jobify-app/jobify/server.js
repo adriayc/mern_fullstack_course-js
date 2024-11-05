@@ -31,7 +31,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // Call middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(path.resolve(__dirname, './public'))); // File upload (directory)
+// app.use(express.static(path.resolve(__dirname, './public'))); // File upload (directory)
+app.use(express.static(path.resolve(__dirname, './client/dist'))); // File upload (directory)
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
@@ -50,7 +51,8 @@ app.use('/api/v1/users', authenticateUser, userRouter);
 
 // Response file 'index.html' (Client)
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public', 'index.html'));
+  // res.sendFile(path.resolve(__dirname, './public', 'index.html'));
+  res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
 });
 
 // Not found (Middleware)

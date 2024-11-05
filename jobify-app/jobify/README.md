@@ -6153,7 +6153,7 @@ app.get('*', (req, res) => {
 - sign up of for account
 - create git repository
 
-#### Build Front-End on Render
+#### Build Front-End on Render (Info)
 
 - add script
 - change path
