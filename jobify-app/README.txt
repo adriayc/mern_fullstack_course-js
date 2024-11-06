@@ -24,6 +24,8 @@ MERN JOBIFY
         $ npm i dayjs
       - Recharts
         $ npm install recharts
+      - React Query and React Query Devtools
+        $ npm i @tanstack/react-query @tanstack/react-query-devtools
 
 * Backend
   - Initialize the app
