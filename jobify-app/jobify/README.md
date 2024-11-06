@@ -6243,7 +6243,7 @@ export const updateUser = async (req, res) => {
 };
 ```
 
-#### Setup Global Loading
+#### Setup Global Loading (Info)
 
 - create loading component (import/export)
 - check for loading in DashboardLayout page

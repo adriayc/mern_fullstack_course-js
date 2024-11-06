@@ -1,5 +1,11 @@
 import { createContext, useContext, useState } from 'react';
-import { Outlet, redirect, useLoaderData, useNavigate } from 'react-router-dom';
+import {
+  Outlet,
+  redirect,
+  useLoaderData,
+  useNavigate,
+  useNavigation,
+} from 'react-router-dom';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/Dashboard';
 // Custom fetch (Axios)
@@ -7,7 +13,7 @@ import customFetch from '../utils/customFetch';
 // Functions
 import { checkDefaultTheme } from '../App';
 // Components
-import { SmallSidebar, BigSidebar, Navbar } from '../components';
+import { SmallSidebar, BigSidebar, Navbar, Loading } from '../components';
 import { toast } from 'react-toastify';
 
 // Loader
@@ -25,10 +31,13 @@ export const loader = async () => {
 const DashboardContext = createContext();
 
 const DashboardLayout = ({ isDarkThemeEnabled }) => {
+  console.log('AAC');
   // Get loader data
   const { user } = useLoaderData();
 
   const navigate = useNavigate();
+  const navigation = useNavigation();
+  const isPageLoading = navigation.state === 'loading';
 
   const [showSidebar, setShowSidebar] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme);
@@ -70,7 +79,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet context={{ user }} />
+              {isPageLoading ? <Loading /> : <Outlet context={{ user }} />}
             </div>
           </div>
         </main>
