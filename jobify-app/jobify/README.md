@@ -6153,7 +6153,7 @@ app.get('*', (req, res) => {
 - sign up of for account
 - create git repository
 
-#### Build Front-End on Render
+#### Build Front-End on Render (Info)
 
 - add script
 - change path
@@ -6243,7 +6243,7 @@ export const updateUser = async (req, res) => {
 };
 ```
 
-#### Setup Global Loading
+#### Setup Global Loading (Info)
 
 - create loading component (import/export)
 - check for loading in DashboardLayout page
@@ -6280,7 +6280,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
 };
 ```
 
-#### React Query
+#### React Query (Info)
 
 React Query is a powerful library that simplifies data fetching, caching, and synchronization in React applications. It provides a declarative and intuitive way to manage remote data by abstracting away the complex logic of fetching and caching data from APIs. React Query offers features like automatic background data refetching, optimistic updates, pagination support, and more, making it easier to build performant and responsive applications that rely on fetching and manipulating data.
 
@@ -6828,7 +6828,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
 
 ```
 
-#### Security
+#### Security (Info)
 
 ```sh
 npm install helmet express-mongo-sanitize express-rate-limit

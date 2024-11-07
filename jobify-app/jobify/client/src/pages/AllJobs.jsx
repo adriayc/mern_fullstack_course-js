@@ -5,34 +5,49 @@ import { toast } from 'react-toastify';
 import customFetch from '../utils/customFetch';
 // Components
 import { JobsContainer, SearchContainer } from '../components';
+import { useQuery } from '@tanstack/react-query';
+
+// Query
+const allJobsQuery = (params) => {
+  const { search, jobStatus, jobType, sort, page } = params;
+  return {
+    queryKey: [
+      'jobs',
+      search ?? '',
+      jobStatus ?? 'all',
+      jobType ?? 'all',
+      sort ?? 'newest',
+      page ?? '1',
+    ],
+    queryFn: async () => {
+      const { data } = await customFetch.get('/jobs', {
+        params,
+      });
+      return data;
+    },
+  };
+};
 
 // Loader
-export const loader = async ({ request }) => {
-  // console.log(request.url);
-  // Get search params (object)
-  const params = Object.fromEntries([
-    ...new URL(request.url).searchParams.entries(),
-  ]);
-  // console.log(params);
+export const loader =
+  (queryClient) =>
+  async ({ request }) => {
+    // Get search params (object)
+    const params = Object.fromEntries([
+      ...new URL(request.url).searchParams.entries(),
+    ]);
 
-  try {
     // Get jobs (With params)
-    const { data } = await customFetch.get('/jobs', {
-      params,
-    });
-    return { data, searchValues: { ...params } };
-  } catch (error) {
-    // console.log(error);
-    toast.error(error?.response?.data?.msg);
-    return error;
-  }
-};
+    await queryClient.ensureQueryData(allJobsQuery(params));
+    return { searchValues: { ...params } };
+  };
 
 // Define context
 const AllJobsContext = createContext();
 
 const AllJobs = () => {
-  const { data, searchValues } = useLoaderData();
+  const { searchValues } = useLoaderData();
+  const { data } = useQuery(allJobsQuery(searchValues));
 
   return (
     <AllJobsContext.Provider value={{ data, searchValues }}>

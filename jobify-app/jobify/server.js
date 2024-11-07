@@ -5,6 +5,9 @@ import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import { v2 as cloudinary } from 'cloudinary';
+// Security packages
+import helmet from 'helmet';
+import mongoSanitize from 'express-mongo-sanitize';
 // Public
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -31,17 +34,14 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // Call middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(express.static(path.resolve(__dirname, './public'))); // File upload (directory)
+// app.use(express.static(path.resolve(__dirname, './public'))); // File upload (directory)
+app.use(express.static(path.resolve(__dirname, './client/dist'))); // File upload (directory)
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
-
-app.get('/', (req, res) => {
-  res.send('Hello world');
-});
-app.get('/api/v1/test', (req, res) => {
-  res.json({ msg: 'test route' });
-});
+// Security
+app.use(helmet());
+app.use(mongoSanitize());
 
 // Call routers
 app.use('/api/v1/jobs', authenticateUser, jobRouter);
@@ -50,7 +50,8 @@ app.use('/api/v1/users', authenticateUser, userRouter);
 
 // Response file 'index.html' (Client)
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, './public', 'index.html'));
+  // res.sendFile(path.resolve(__dirname, './public', 'index.html'));
+  res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'));
 });
 
 // Not found (Middleware)

@@ -24,6 +24,8 @@ MERN JOBIFY
         $ npm i dayjs
       - Recharts
         $ npm install recharts
+      - React Query and React Query Devtools
+        $ npm i @tanstack/react-query @tanstack/react-query-devtools
 
 * Backend
   - Initialize the app
@@ -73,6 +75,15 @@ MERN JOBIFY
         $ npm i cloudinary
       * Day.JS
         $ npm i dayjs
+      * Data:uri (Generate Data URI scheme)
+        $ npm i datauri
+      Security Packages
+      * Helmet
+        $ npm i helmet
+      * Express Mongoose Sanitize
+        $ npm i express-mongo-sanitize
+      * Express Rate Limit
+        $ npm i express-rate-limit
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
@@ -147,4 +158,8 @@ MERN JOBIFY
             > File Contents: COPY and PASTE the entire contents of the .env file
             Click 'Save'
         Click 'Create Web Service'
-    + COPY URL_APP and open the browser to test  
+    + COPY URL_APP and open the browser to test
+    + Re-deploy [Dashboard -> Select: 'temp-mern-course']
+      - Settings
+        > Build Command: $ npm run setup-production-app
+      Click 'Manul Deploy' | 'Clear build cache & deploy'

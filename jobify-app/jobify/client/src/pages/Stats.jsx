@@ -1,25 +1,34 @@
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { QueryClient, useQueries, useQuery } from '@tanstack/react-query';
 // Custom fetch (Axios)
 import customFetch from '../utils/customFetch';
 // Components
 import { ChartsContainer, StatsContainer } from '../components';
 
+// Query
+const statsQuery = {
+  queryKey: ['stats'],
+  queryFn: async () => {
+    const response = await customFetch.get('/jobs/stats');
+    return response.data;
+  },
+};
+
 // Loader
-export const loader = async () => {
-  try {
-    const { data } = await customFetch.get('/jobs/stats');
-    return data;
-  } catch (error) {
-    // console.log(error);
-    toast.error(error?.response?.data?.msg);
-    return error;
-  }
+export const loader = (queryClient) => async () => {
+  // const data = await queryClient.ensureQueryData(statsQuery);
+  // return data;
+  await queryClient.ensureQueryData(statsQuery);
+  return null;
 };
 
 const Stats = () => {
-  const { defaultStats, monthlyApplications } = useLoaderData();
-  console.log(monthlyApplications);
+  // const { defaultStats, monthlyApplications } = useLoaderData();
+
+  // const { isLoading, isError, data } = useQuery(statsQuery);
+  const { data } = useQuery(statsQuery);
+  const { defaultStats, monthlyApplications } = data;
 
   return (
     <>
