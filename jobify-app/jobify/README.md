@@ -6828,7 +6828,7 @@ const DashboardLayout = ({ isDarkThemeEnabled }) => {
 
 ```
 
-#### Security
+#### Security (Info)
 
 ```sh
 npm install helmet express-mongo-sanitize express-rate-limit

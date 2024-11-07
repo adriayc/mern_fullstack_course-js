@@ -77,6 +77,13 @@ MERN JOBIFY
         $ npm i dayjs
       * Data:uri (Generate Data URI scheme)
         $ npm i datauri
+      Security Packages
+      * Helmet
+        $ npm i helmet
+      * Express Mongoose Sanitize
+        $ npm i express-mongo-sanitize
+      * Express Rate Limit
+        $ npm i express-rate-limit
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)

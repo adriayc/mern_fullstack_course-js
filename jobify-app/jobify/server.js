@@ -5,6 +5,9 @@ import * as dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import { v2 as cloudinary } from 'cloudinary';
+// Security packages
+import helmet from 'helmet';
+import mongoSanitize from 'express-mongo-sanitize';
 // Public
 import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -36,13 +39,9 @@ app.use(express.static(path.resolve(__dirname, './client/dist'))); // File uploa
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
-
-app.get('/', (req, res) => {
-  res.send('Hello world');
-});
-app.get('/api/v1/test', (req, res) => {
-  res.json({ msg: 'test route' });
-});
+// Security
+app.use(helmet());
+app.use(mongoSanitize());
 
 // Call routers
 app.use('/api/v1/jobs', authenticateUser, jobRouter);
