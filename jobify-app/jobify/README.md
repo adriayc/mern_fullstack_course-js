@@ -5267,7 +5267,7 @@ export const showStats = async (req, res) => {
 };
 ```
 
-#### Stats - Complete Server Functionality
+#### Stats - Complete Server Functionality (Info)
 
 [MongoDB Docs](https://www.mongodb.com/docs/manual/core/aggregation-pipeline/)
 
@@ -5466,7 +5466,7 @@ const ChartsContainer = ({ data }) => {
 export default ChartsContainer;
 ```
 
-#### Charts
+#### Charts (Info)
 
 [recharts](https://recharts.org/en-US/)
 

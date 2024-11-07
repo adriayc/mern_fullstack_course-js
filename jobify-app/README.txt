@@ -22,6 +22,8 @@ MERN JOBIFY
         $ npm i react-toastify
       - Day.JS
         $ npm i dayjs
+      - Recharts
+        $ npm install recharts
 
 * Backend
   - Initialize the app
@@ -69,6 +71,8 @@ MERN JOBIFY
         $ npm i multer
       * Cloudinary
         $ npm i cloudinary
+      * Day.JS
+        $ npm i dayjs
     + Run app
       $ npm run setup-project   // Install all dependencies (Client and Server)
       $ npm run dev             // Run app (nodemon app.js)
