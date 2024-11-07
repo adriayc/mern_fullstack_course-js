@@ -6,6 +6,7 @@ import {
   useNavigate,
   useNavigation,
 } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 // Wrapper (Styled Components)
 import Wrapper from '../assets/wrappers/Dashboard';
 // Custom fetch (Axios)
@@ -16,11 +17,19 @@ import { checkDefaultTheme } from '../App';
 import { SmallSidebar, BigSidebar, Navbar, Loading } from '../components';
 import { toast } from 'react-toastify';
 
-// Loader
-export const loader = async () => {
-  try {
+// Query
+const userQuery = {
+  queryKey: ['user'],
+  queryFn: async () => {
     const { data } = await customFetch.get('/users/current-user');
     return data;
+  },
+};
+
+// Loader
+export const loader = (queryClient) => async () => {
+  try {
+    return await queryClient.ensureQueryData(userQuery);
   } catch (error) {
     console.log(error);
     return redirect('/');
@@ -30,9 +39,11 @@ export const loader = async () => {
 // Define context
 const DashboardContext = createContext();
 
-const DashboardLayout = ({ isDarkThemeEnabled }) => {
+const DashboardLayout = ({ isDarkThemeEnabled, queryClient }) => {
   // Get loader data
-  const { user } = useLoaderData();
+  // const { user } = useLoaderData();
+  // Get query client
+  const { user } = useQuery(userQuery).data;
 
   const navigate = useNavigate();
   const navigation = useNavigation();
