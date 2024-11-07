@@ -4806,7 +4806,7 @@ const Wrapper = styled.article`
 export default Wrapper;
 ```
 
-#### Avatar Image
+#### Avatar Image (Info)
 
 - get two images from pexels
 
@@ -5075,7 +5075,7 @@ const SubmitBtn = ({ formBtn }) => {
 export default SubmitBtn;
 ```
 
-#### Test User
+#### Test User (Info)
 
 - create test user
 - feel free to use one of the chatGPT options
@@ -5148,7 +5148,7 @@ const Login = () => {
 export default Login;
 ```
 
-#### Test User - Restrict Access
+#### Test User - Restrict Access (Info)
 
 authMiddleware
 
@@ -5179,7 +5179,7 @@ export const checkForTestUser = (req, res, next) => {
 
 - add to updateUser, createJob, updateJob, deleteJob
 
-#### Mock Data
+#### Mock Data (Info)
 
 [Mockaroo ](https://www.mockaroo.com/)
 

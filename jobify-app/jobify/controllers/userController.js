@@ -1,4 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
+import { v2 as cloudinary } from 'cloudinary';
+import { promises as fs } from 'fs';
 // Models
 import User from '../models/UserModel.js';
 import Job from '../models/JobModel.js';
@@ -17,9 +19,25 @@ export const getApplicationStats = async (req, res) => {
 
 export const updateUser = async (req, res) => {
   // Delete password
-  const obj = { ...req.body };
-  delete obj.password;
+  const newUser = { ...req.body };
+  delete newUser.password;
 
-  const updatedUser = await User.findByIdAndUpdate(req.user.userId, req.body);
+  // Validation upload file
+  if (req.file) {
+    // Upload cloud
+    const response = await cloudinary.uploader.upload(req.file.path);
+    // Removes files or symbolic links
+    await fs.unlink(req.file.path);
+    // Update attributes
+    newUser.avatar = response.secure_url;
+    newUser.avatarPublicId = response.public_id;
+  }
+
+  const updatedUser = await User.findByIdAndUpdate(req.user.userId, newUser);
+  if (req.file && updatedUser.avatarPublicId) {
+    // Delete asset
+    await cloudinary.uploader.destroy(updatedUser.avatarPublicId);
+  }
+
   res.status(StatusCodes.OK).json({ msg: 'update user' });
 };
