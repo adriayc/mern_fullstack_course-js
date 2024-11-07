@@ -3,40 +3,40 @@ import styled from 'styled-components';
 const Wrapper = styled.article`
   padding: 2rem;
   background: var(--background-secondary-color);
+  /* Access props */
   border-bottom: 5px solid ${(props) => props.color};
-  border-radius: var(--border-radius);
-
   header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
   .count {
-    display: block;
-    font-weight: 700;
-    font-size: 50px;
+    /* Access props */
     color: ${(props) => props.color};
+    font-size: 50px;
+    font-weight: 700;
     line-height: 2;
   }
   .title {
-    margin: 0;
-    text-transform: capitalize;
-    letter-spacing: var(--letter-spacing);
-    text-align: left;
-    margin-top: 0.5rem;
     font-size: 1.25rem;
+    text-transform: capitalize;
+    text-align: left;
+    letter-spacing: var(--letter-spacing);
+    margin-top: 0.5rem;
   }
   .icon {
     width: 70px;
     height: 60px;
+    /* Access props */
     background: ${(props) => props.bcg};
     border-radius: var(--border-radius);
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     svg {
-      font-size: 2rem;
+      /* Access props */
       color: ${(props) => props.color};
+      font-size: 2rem;
     }
   }
 `;
