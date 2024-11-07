@@ -9,3 +9,6 @@ MERN JOBIFY
       $ code .              // Open VSCode
       $ npm install
       $ npm run dev
+    + Install packages
+      - React Router
+        $ npm i react-router-dom
