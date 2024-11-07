@@ -7,14 +7,17 @@ import { ChartsContainer, StatsContainer } from '../components';
 
 // Loader
 export const loader = async () => {
-  try {
-    const { data } = await customFetch.get('/jobs/stats');
-    return data;
-  } catch (error) {
-    // console.log(error);
-    toast.error(error?.response?.data?.msg);
-    return error;
-  }
+  // try {
+  //   const { data } = await customFetch.get('/jobs/stats');
+  //   return data;
+  // } catch (error) {
+  //   // console.log(error);
+  //   toast.error(error?.response?.data?.msg);
+  //   return error;
+  // }
+
+  const { data } = await customFetch.get('/jobs/stats');
+  return data;
 };
 
 const Stats = () => {

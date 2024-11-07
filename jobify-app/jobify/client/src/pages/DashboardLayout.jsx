@@ -31,7 +31,6 @@ export const loader = async () => {
 const DashboardContext = createContext();
 
 const DashboardLayout = ({ isDarkThemeEnabled }) => {
-  console.log('AAC');
   // Get loader data
   const { user } = useLoaderData();
 

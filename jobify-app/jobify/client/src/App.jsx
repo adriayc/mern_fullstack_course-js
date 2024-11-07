@@ -16,6 +16,8 @@ import {
   Admin,
   EditJob,
 } from './pages';
+// Components
+import ErrorElement from './components/ErrorElement';
 // Actions
 import { action as registerAction } from './pages/Register';
 import { action as loginAction } from './pages/Login';
@@ -89,6 +91,7 @@ const router = createBrowserRouter([
             path: 'stats',
             element: <Stats />,
             loader: statsLoader,
+            errorElement: <ErrorElement />,
           },
           {
             path: 'profile',
