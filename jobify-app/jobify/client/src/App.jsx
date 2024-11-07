@@ -47,7 +47,7 @@ checkDefaultTheme();
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 5, // 5M
+      staleTime: 1000 * 60 * 5, // 5 minutes
     },
   },
 });
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
           {
             path: 'stats',
             element: <Stats />,
-            loader: statsLoader,
+            loader: statsLoader(queryClient),
             errorElement: <ErrorElement />,
           },
           {
