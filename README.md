@@ -38,3 +38,6 @@ $ npm create vite@latest client -- --template react
 
 ## React Router
 [React Router](https://reactrouter.com/en/main) is a widely-used library for managing client-side routing in React applications.
+
+## Styled Components
+[Styled Components](https://styled-components.com/) is a popular library in the React ecosystem that allows developers to write CSS directly within their JavaScript components using tagged template literals

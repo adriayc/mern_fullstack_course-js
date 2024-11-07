@@ -554,7 +554,7 @@ const Logo = () => {
 export default Logo;
 ```
 
-#### Logo and Images
+#### Logo and Images (Info)
 
 - logo built in Figma
 - [Cool Images](https://undraw.co/)

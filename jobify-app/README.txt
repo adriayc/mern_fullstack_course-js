@@ -12,3 +12,5 @@ MERN JOBIFY
     + Install packages
       - React Router
         $ npm i react-router-dom
+      - Styled Components
+        $ npm install styled-components
