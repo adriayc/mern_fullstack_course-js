@@ -41,3 +41,18 @@ $ npm create vite@latest client -- --template react
 
 ## Styled Components
 [Styled Components](https://styled-components.com/) is a popular library in the React ecosystem that allows developers to write CSS directly within their JavaScript components using tagged template literals
+
+## Node.js
+[Node.js](https://nodejs.org/) is a JavaScript runtime built on Chrome's V8 JavaScript engine, allowing developers to tun JavaScript code on the server side.
+
+## Express.js
+[Express.js](https://expressjs.com/) is a popular web application framework for Node.js. It simplifies the process of biulding web servers and APIs by providing a thin layer of essential tools feactures that make sever-side development more manageable.
+
+## MongoDB
+[MongoDB](https://www.mongodb.com/) is a popular NoSQL database known for its flexibility and scalability. Unlike ralational databases, which store data in tables, MongoDB stores data in JSON-like documents.
+
+### MongoDB Atlas
+[MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) is MongoDB's fully managed, cloud-hosted database service. It provides a powerful, scalable, and secure solution for deploying, managing, and scalling MongoDB databases across popular cloud platforms like AWS, Google Cloud Platform (GCP), and  Microsoft Azure.
+
+### Mongoose
+[Mongoose](https://mongoosejs.com/) is an Object Data Modeling (ODM) library for MongoDB and Node.js
