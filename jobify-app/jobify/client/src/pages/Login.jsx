@@ -65,8 +65,16 @@ const Login = () => {
         <Logo />
         <h4>Login</h4>
         {errors?.msg && <p style={{ color: 'red' }}>{errors.msg}</p>}
-        <FormRow type="email" name="email" defaultValue="adriano@mail.com" />
-        <FormRow type="password" name="password" defaultValue="secret123" />
+        <FormRow
+          type="email"
+          name="email"
+          // defaultValue="adriano@mail.com"
+        />
+        <FormRow
+          type="password"
+          name="password"
+          // defaultValue="secret123"
+        />
         <SubmitBtn />
         <button type="button" className="btn btn-block" onClick={loginDemoUser}>
           Explore the app

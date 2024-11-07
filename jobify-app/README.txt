@@ -106,3 +106,45 @@ MERN JOBIFY
       > createdAt       Datetime          01/01/2023 to 03/11/2024 format: ISO 8601 (UTC)
         > # Rows: 50    Format: JSON    [true] Array    [false] include null values
       Click 'Preview' and 'Generate Data'
+
+*  Deploy
+  - Local build
+    + Front-end
+      $ cd client/
+      $ npm run build
+    + COPY and PASTE all the contents of the 'build' (Front-end) to the 'public/' directory
+    + Run app (Server)
+      $ node server
+    + Open the browser (URL: http://localhost:5100)
+  - GitHub
+    - Create a new respository
+      > Respository name: temp-mern-course
+      > Public
+      Click 'Create respository'
+    - Local Repo (mern app)
+      $ rm -rf .git
+      $ git add .
+      $ git commit -m "first commit"
+      Push remote
+      $ git remote add origin git@githubm.com:{{USER_NAME}}/{{REPO_NAME}.git
+      $ git branch -M main
+      $ git push -u origin main
+  - Render (URL: https://render.com/)
+    + Sign up/Sign in
+    + New Web Service [Dashboard -> Click 'New +' -> 'Web Service' -> Connect GitHub]
+      > Create a new Web Service
+        > Connect a respository: Search... (temp-mern-course)
+        Click 'Connect'
+      > You are deploying a web service for ...
+        > Name: temp-mern-course
+        > Runtime: Node
+        > Build Command: $ npm install
+        > Start Command: $ node server
+        > Free
+        > Click 'Advanced' -> 'Add Secret File'
+          > Secret File
+            > Filename: .env
+            > File Contents: COPY and PASTE the entire contents of the .env file
+            Click 'Save'
+        Click 'Create Web Service'
+    + COPY URL_APP and open the browser to test  
