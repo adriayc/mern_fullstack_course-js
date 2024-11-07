@@ -7,6 +7,7 @@ import img from '../assets/images/not-found.svg';
 const Error = () => {
   // This hook return anything thrown during an action, loader, or rendering
   const error = useRouteError();
+  console.log(error);
 
   if (error.status === 404) {
     return (

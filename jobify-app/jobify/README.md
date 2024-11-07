@@ -3566,7 +3566,7 @@ const data = await customFetch.get('/test');
 console.log(data);
 ```
 
-#### Typical Form Submission
+#### Typical Form Submission (Info)
 
 ```js
 import { useState } from 'react';
@@ -3585,7 +3585,7 @@ const MyForm = () => {
 export default MyForm;
 ```
 
-#### React Router - Action
+#### React Router - Action (Info)
 
 Route actions are the "writes" to route loader "reads". They provide a way for apps to perform data mutations with simple HTML and HTTP semantics while React Router abstracts away the complexity of asynchronous UI and revalidation. This gives you the simple mental model of HTML + HTTP (where the browser handles the asynchrony and revalidation) with the behavior and UX capabilities of modern SPAs.
 
@@ -3621,7 +3621,7 @@ App.jsx
 },
 ```
 
-#### Register User
+#### Register User (Info)
 
 - FormData API
 
@@ -3655,7 +3655,7 @@ import { action as registerAction } from './pages/Register';
 },
 ```
 
-#### useNavigation() and navigation.state
+#### useNavigation() and navigation.state (Info)
 
 This hook tells you everything you need to know about a page navigation to build pending navigation indicators and optimistic UI on data mutations. Things like:
 
@@ -3689,7 +3689,7 @@ const Register = () => {
 export default Register;
 ```
 
-#### React-Toastify
+#### React-Toastify (Info)
 
 Import and set up the react-toastify library.
 

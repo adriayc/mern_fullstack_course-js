@@ -18,6 +18,8 @@ MERN JOBIFY
         $ npm install react-icons --save
       - Axios
         $ npm install axios
+      - React Toastify
+        $ npm i react-toastify
 
 * Backend
   - Initialize the app
