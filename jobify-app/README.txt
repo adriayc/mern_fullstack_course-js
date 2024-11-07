@@ -20,6 +20,8 @@ MERN JOBIFY
         $ npm install axios
       - React Toastify
         $ npm i react-toastify
+      - Day.JS
+        $ npm i dayjs
 
 * Backend
   - Initialize the app
